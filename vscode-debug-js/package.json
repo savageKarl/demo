@@ -1,0 +1,12 @@
+{
+	"name": "demo-vscode-debug-js",
+	"version": "1.0.0",
+	"description": "a demo for use vscode to debug js project",
+	"main": "index.js",
+	"scripts": {
+		"dev": "ts-node ./src/index.js"
+	},
+	"type": "module",
+	"keywords": [],
+	"author": ""
+}

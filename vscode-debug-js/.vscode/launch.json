@@ -1,0 +1,19 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "js Debugger",
+			"type": "node",
+			"request": "launch",
+			"args": [
+				"${workspaceRoot}/src/index.js" // entry file
+			],
+			"runtimeArgs": [],
+			"sourceMaps": true,
+			"cwd": "${workspaceRoot}",
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"runtimeExecutable": "C:/Users/Administrator/AppData/Roaming/nvm/v18.17.1/node.exe" // node bin file path
+		}
+	]
+}
