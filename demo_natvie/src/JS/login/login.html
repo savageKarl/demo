@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登陆注册界面</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      border: none;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(31, 32, 41);
+    }
+    .shell {
+      width: 300px;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      perspective: 1000px;
+    }
+    .top {
+      width: 300px;
+      display: flex;
+      cursor: pointer;
+      justify-content: space-evenly;
+    }
+    .off, .on {
+      color: #fff;
+      transition: .5s;
+      font: 300 20px '';
+    }
+    .button {
+      width: 60px;
+      height: 25px;
+      background: rgb(255, 255, 167);
+      border-radius: 20px;
+      position: relative;
+    }
+    .ball {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: rgb(46, 45, 56);
+      border-radius: 50%;
+      transition: .5s;
+      box-shadow: 0 0 10px #000;
+      left: 0;
+      transform: translate(-1px);
+    }
+    .bottom {
+      width: 300px;
+      height: 250px;
+      background: rgb(59, 59, 46);
+      transform-style: preserve-3d;
+      position: relative;
+      transition: .7s;
+      border-radius: 5px;
+    }
+    .bottom>div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .bottom>div h2 {
+      color: #fff;
+    }
+
+    .bottom>div input {
+      width: 200px;
+      height: 25px;
+      padding: 0 10px;
+      background: rgb(31, 32, 41);
+      color: #fff;
+
+    }
+    
+    .bottom> div button {
+      width: 80px;
+      height: 30px;
+      color: #333;
+      font-size: 15px;
+      background-color: rgb(255, 235, 167);
+      border-radius: 4px;
+      transition: .3s;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .bottom > div button:hover {
+      box-shadow: 0 0 10px rgb(255, 235, 167);
+    }
+    
+    .signIn {
+      transform: translateZ(70px);
+    }
+    .signUp {
+      position: absolute;
+      top: 0;
+      transform: translateZ(-70px) rotateY(180deg);
+    } 
+  </style>
+</head>
+
+<body>
+  <div class="shell">
+    <div class="top">
+      <span class="off">SIGN IN</span>
+      <div class="button">
+        <div class="ball"></div>
+      </div>
+      <span class="on">SIGN UP</span>
+
+    </div>
+    <div class="bottom">
+      <div class="signIn">
+        <h2>SIGN IN</h2>
+        <input type="text" placeholder="Username">
+        <input type="text" placeholder="password">
+        <button>GO</button>
+      </div>
+      <div class="signUp">
+        <h2>SIGN UP</h2>
+        <input type="text" placeholder="Username">
+        <input type="text" placeholder="password">
+        <input type="text" placeholder="Confrim Password">
+        <button>GO</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const button = document.querySelector('.button');
+    const ball = document.querySelector('.ball');
+    const bottom = document.querySelector('.bottom');
+    const off = document.querySelector('.off');
+    const on = document.querySelector('.on');
+    let index = 0;
+    button.addEventListener('click', () => {
+      
+      if (index ===  0) {
+        index = 1
+        ball.style.left = 61 + '%'
+        on.style.opacity = 1
+        off.style.opacity =.5
+        button.style.background="green"
+        bottom.style.transform = 'rotateY(180deg)'
+      } else {
+        index = 0
+        ball.style.left = 0 + '%'
+        on.style.opacity = .5
+        off.style.opacity =1
+        button.style.background="blue"
+        bottom.style.transform = 'rotateY(0)'
+      }
+    })
+  </script>
+</body>
+
+</html>

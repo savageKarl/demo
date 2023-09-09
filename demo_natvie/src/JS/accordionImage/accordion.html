@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图片手风琴</title>
+</head>
+<body>
+  <div class="accordion">
+    <div class="accordion_item accordion_item-active">
+      <img class="accordion_img" src="./imgs/1.jpg">
+    </div>
+    <div class="accordion_item">
+      <img class="accordion_img" src="./imgs/2.jpg">
+    </div>
+    <div class="accordion_item">
+      <img class="accordion_img" src="./imgs/3.jpg">
+    </div>
+    <div class="accordion_item">
+      <img class="accordion_img" src="./imgs/4.jpg">
+    </div>
+    <div class="accordion_item">
+      <img class="accordion_img" src="./imgs/5.jpg">
+    </div>
+    <div class="accordion_item">
+      <img class="accordion_img" src="./imgs/6.jpg">
+    </div>
+  </div>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: lightpink;
+      display: flex;
+    }
+
+    .accordion {
+      margin: 100px auto;
+      display: flex;
+    }
+
+    .accordion_item {
+      width: 100px;
+      height: 350px;
+      float: left;
+      transition: all 1s;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    
+    .accordion_item-active {
+      width: 600px;
+    }
+    
+    /* 
+      制作图片手风琴需要主要的地方，由于图片大，需要缩放图片，
+      为了显示图片的一部分且不变形这里只能设置height，不能设置width
+    */
+    .accordion_img {
+      height: 100%;
+    }
+  </style>
+
+  <script>
+    const accordionItemList = document.querySelectorAll('.accordion_item');
+    accordionItemList.forEach((item, index) => {
+      item.addEventListener('mouseover', () => {
+        accordionItemList.forEach((item, index) => {
+          item.classList.remove('accordion_item-active');
+        });
+        item.classList.add('accordion_item-active');
+      });
+    });
+  </script>
+</body>
+</html>

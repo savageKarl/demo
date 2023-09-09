@@ -1,0 +1,10 @@
+.container {
+  padding: 30rpx;
+  display: flex;
+  justify-content: center;
+  .text, .version {
+    text-align: center;
+    padding: 30rpx;
+  }
+
+}

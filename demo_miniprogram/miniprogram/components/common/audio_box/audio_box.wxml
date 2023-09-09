@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="musicBox" style="left: {{options.left || 0}}rpx; bottom: {{options.bottom || 0}}rpx; width: {{options.wdith || 60}}rpx; height: {{options.height || 60}}rpx;">
+    <image bind:tap="click" mode="aspectFit" class="music {{audioStatus}}" src="{{options.iconPath}}"></image>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+{
+	"name": "demo-vitest-react",
+	"version": "1.0.0",
+	"description": "a demo for vitest testing react",
+	"scripts": {
+		"test": "vitest"
+	},
+	"dependencies": {
+		"@testing-library/jest-dom": "^5.17.0",
+		"@testing-library/react": "^13.4.0",
+		"@types/jest": "^27.5.2",
+		"@types/node": "^16.18.50",
+		"@types/react": "^18.2.21",
+		"@types/react-dom": "^18.2.7",
+		"jsdom": "^22.1.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"typescript": "^4.9.5",
+		"vitest": "^0.34.4"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/testing-library__jest-dom": "5.9.1"
+	}
+}

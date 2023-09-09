@@ -1,0 +1,5 @@
+<view>
+  <view>
+    {{userInfo.name}}
+  </view>
+</view>

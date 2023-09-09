@@ -1,0 +1,25 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "ts-node Debugger",
+			"type": "node",
+			"request": "launch",
+			"args": [
+				"${workspaceRoot}/src/index.ts" // entry file
+			],
+			"runtimeArgs": [
+				"--nolazy",
+				"-r",
+				"ts-node/register",
+				"--loader",
+				"ts-node/esm"
+			],
+			"sourceMaps": true,
+			"cwd": "${workspaceRoot}",
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"runtimeExecutable": "C:/Users/Administrator/AppData/Roaming/nvm/v18.17.1/node.exe" // node bin file path
+		}
+	]
+}

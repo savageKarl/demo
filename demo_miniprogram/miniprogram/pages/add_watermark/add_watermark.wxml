@@ -1,0 +1,14 @@
+<view class="container">
+  <button type="primary" bindtap="chooseImage">选择图片</button>
+  <view class="text">未加水印的图片：</view>
+  <image src="{{imageSrc}}" mode="aspectFit" data-src="{{imageSrc}}" bindtap="previewImage"></image>
+  <view class="text">已加水印的图片：</view>
+  <image src="{{canvasImageSrc}}" mode="aspectFit" data-src="{{canvasImageSrc}}" bindtap="previewImage"></image>
+  <view class="version">版本号：{{version}}</view>
+  
+  <imageWatermark 
+    imagePath="{{imagePath}}"
+    text="{{text}}"
+    bind:complete="onComplete"
+  />
+</view>

@@ -1,0 +1,5 @@
+<view class="container">
+
+  <audio_box id="audio_box" options="{{audioOption}}"></audio_box>
+
+</view>

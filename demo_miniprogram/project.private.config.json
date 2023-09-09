@@ -1,0 +1,30 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/play_audio/play_audio",
+                    "pathName": "pages/play_audio/play_audio",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/add_watermark/add_watermark",
+                    "pathName": "pages/add_watermark/add_watermark",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

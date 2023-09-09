@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"module": "commonjs" /* Specify what module code is generated. */,
+		"rootDir": "./" /* Specify the root folder within your source files. */,
+		"outDir": "./dist" /* Specify an output folder for all emitted files. */,
+		"skipLibCheck": true /* Skip type checking all .d.ts files. */
+	},
+	"include": ["./src/*"],
+	"exclude": []
+}

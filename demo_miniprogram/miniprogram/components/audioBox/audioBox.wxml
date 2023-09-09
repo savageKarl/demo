@@ -1,0 +1,8 @@
+<view class="musicBox" style="{{ style }}">
+  <image 
+    bind:tap="onClick" 
+    mode="aspectFit" 
+    class="musicBox_music musicBox_music-{{ audioStatus }}" 
+    src="{{ iconPath }}"
+  />
+</view>
