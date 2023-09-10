@@ -1,0 +1,16 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Electron Main",
+			"program": "${workspaceFolder}/dist/main.js", // 需要调试的项目入口文件，指定为编译后的js文件
+			"request": "launch",
+			"runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+			"skipFiles": ["<node_internals>/**"],
+			"type": "node"
+		}
+	]
+}
